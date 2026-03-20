@@ -375,3 +375,36 @@ footer p {
     color: var(--aofuji-iro);
     border-bottom: 1px solid var(--aofuji-iro);
 }
+
+/* ---------------------------------------------------
+   表のようなレイアウト（左に日付、右に内容）
+--------------------------------------------------- */
+.table-layout li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.date-col {
+    flex: 0 0 120px; /* 日付カラムの幅を固定（「2025.04 - 現在」が収まる幅） */
+    font-weight: bold;
+    color: var(--aofuji-iro);
+    line-height: 1.7; /* 右側のテキストと高さを合わせる */
+}
+
+.content-col {
+    flex: 1; /* 残りの幅をすべてコンテンツにする */
+    line-height: 1.7;
+}
+
+/* スマホ閲覧時は、狭くなるので縦並びに自動調整する */
+@media (max-width: 600px) {
+    .table-layout li {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .date-col {
+        flex: none;
+        width: auto;
+    }
+}
