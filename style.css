@@ -81,12 +81,11 @@ nav ul li a:hover {
 
 /* メインコンテンツ */
 main {
-    max-width: 800px;
-    /* 【修正】ヘッダー画像の上に自己紹介カードを少し重ねるためのマイナスマージン */
+    max-width: 1000px; /* ★ここを800pxから1000pxに変更 */
     margin: -80px auto 0; 
     padding: 0 2rem;
     position: relative;
-    z-index: 10; /* 画像より前面に出す */
+    z-index: 10; 
 }
 
 .section {
@@ -201,7 +200,7 @@ footer {
 }
 
 .footer-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
