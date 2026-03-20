@@ -1,90 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究者ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#presentations">Presentations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h1>氏名 (Your Name)</h1>
+            <p class="affiliation">〇〇大学大学院 5年一貫制博士課程 加速器科学専攻</p>
+            <p class="intro">
+                シリカエアロゲルを用いたミューオンg-2/EDM精密測定に向けたビームプロファイルモニターの開発などを行っています。
+            </p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="btn">Email</a>
+                <a href="https://github.com/yourusername" target="_blank" class="btn">GitHub</a>
+                <a href="https://researchmap.jp/yourid" target="_blank" class="btn">Researchmap</a>
+            </div>
+        </section>
+
+        <section id="news" class="section">
+            <h2>News</h2>
+            <ul class="list-style">
+                <li><span class="date">2026.03</span> 学振（日本学術振興会特別研究員）への申請準備中です。</li>
+                <li><span class="date">2026.02</span> 〇〇財団の奨学生に採用されました。</li>
+                <li><span class="date">2025.12</span> ビームテストを実施し、データ解析を開始しました。</li>
+            </ul>
+        </section>
+
+        <section id="cv" class="section">
+            <h2>Education & Experience</h2>
+            <div class="cv-item">
+                <h3>学歴</h3>
+                <ul class="list-style">
+                    <li><span class="date">202X.04 - 現在</span> 〇〇大学大学院 5年一貫制博士課程 加速器科学専攻</li>
+                    <li><span class="date">202X.03</span> 〇〇大学 理学部 物理学科 卒業</li>
+                </ul>
+            </div>
+            <div class="cv-item">
+                <h3>活動歴・受賞歴</h3>
+                <ul class="list-style">
+                    <li><span class="date">2026.04</span> 〇〇奨学財団 奨学生</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <ul class="list-style">
+                <li>
+                    <u>Your Name</u>, Co-author A, Co-author B.<br>
+                    "Title of the paper about Silica Aerogels", <i>Journal Name</i>, Vol.X, pp.XXX-XXX (2025).
+                </li>
+            </ul>
+        </section>
+
+        <section id="presentations" class="section">
+            <h2>Presentations</h2>
+            
+            <h3>国際学会 (International Conferences)</h3>
+            <ul class="list-style">
+                <li>
+                    <u>Your Name</u>, Co-author A.<br>
+                    "Development of Beam Profile Monitor...", <i>Conference Name</i>, Location, Country, Month. 2025. (Poster/Oral)
+                </li>
+            </ul>
+
+            <h3>国内学会 (Domestic Conferences)</h3>
+            <ul class="list-style">
+                <li>
+                    <u>氏名</u>, 共同研究者.<br>
+                    「電子ビーム照射によるシリカエアロゲルの屈折率変化の測定」, <i>〇〇学会 第X回年会</i>, 開催地, 2026年3月. (口頭)
+                </li>
+            </ul>
+
+            <h3>研究会など (Workshops)</h3>
+            <ul class="list-style">
+                <li>
+                    <u>氏名</u>.<br>
+                    「ミューオン線形加速器におけるビームプロファイルモニターの開発状況」, <i>第X回 〇〇研究会</i>, 開催地, 2025年11月.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>ご自身の所属機関の住所や居室番号などを記載できます。</p>
+        <p>〒XXX-XXXX 〇〇県〇〇市〇〇 1-2-3 〇〇棟 XX号室</p>
+        <div class="contact-links footer-links">
+            <a href="mailto:your.email@example.com" class="btn">your.email@example.com</a>
+            <a href="https://twitter.com/yourid" target="_blank" class="btn">X (Twitter)</a>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+        <p class="copyright">&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
