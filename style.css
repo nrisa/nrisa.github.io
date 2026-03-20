@@ -1,10 +1,14 @@
 /* 基本設定 */
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #3498db;
+    --wasurenagusa-color: #89C4F4; /* 勿忘草色（基調色） */
+    --accent-blue: #5C97BF;       /* アクセント（少し濃い青） */
     --text-color: #333;
-    --bg-color: #fafafa;
-    --border-color: #eee;
+    --bg-color: #fdfdfd;           /* ほぼ白に近いグレー */
+    --card-bg-color: #f9f9f9;     /* リストアイテムの背景 */
+    
+    /* 丸みの基準 */
+    --border-radius-base: 12px;
+    --border-radius-pill: 50px;    /* カプセル型 */
 }
 
 * {
@@ -15,18 +19,19 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 /* ナビゲーション */
 header {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.98);
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     z-index: 1000;
 }
 
@@ -34,145 +39,184 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
 }
 
 nav ul li {
-    margin: 0 1.5rem;
+    margin: 0 1rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--wasurenagusa-color); /* 勿忘草色 */
     font-weight: bold;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-pill); /* 丸み */
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--accent-color);
+    background-color: var(--wasurenagusa-color);
+    color: #fff;
 }
 
 /* メインコンテンツ */
 main {
     max-width: 800px;
-    margin: 80px auto 0; /* ヘッダーの高さ分下げる */
-    padding: 2rem;
+    margin: 100px auto 0; /* ヘッダーの高さ分下げる */
+    padding: 0 2rem;
 }
 
 .section {
-    margin-bottom: 4rem;
-    padding-top: 2rem; /* スクロール位置の調整 */
+    margin-bottom: 5rem;
+    padding-top: 2rem;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    font-size: 2.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    letter-spacing: -1px;
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color);
+    font-size: 2rem;
+    color: var(--accent-blue);
+    position: relative;
+    display: inline-block;
     padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-h3 {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin: 1.5rem 0 0.5rem;
-}
-
-.affiliation {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.intro {
-    font-size: 1.05rem;
     margin-bottom: 2rem;
 }
 
-/* リストスタイル */
+/* h2の下線を丸く */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--wasurenagusa-color);
+    border-radius: var(--border-radius-pill);
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--accent-blue);
+    margin: 2rem 0 1rem;
+}
+
+.affiliation {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.intro {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: #555;
+}
+
+/* リストアイテム全体を丸いカード風に */
 .list-style {
     list-style: none;
 }
 
 .list-style li {
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--border-color);
+    background-color: var(--card-bg-color);
+    margin-bottom: 1.2rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-base); /* 丸み */
+    border-left: 5px solid var(--wasurenagusa-color); /* 左側のボーダー */
+    transition: transform 0.2s ease;
+}
+
+.list-style li:hover {
+    transform: translateY(-3px); /* 少し浮かす */
 }
 
 .date {
     display: inline-block;
-    width: 80px;
+    width: 90px;
     font-weight: bold;
-    color: #555;
+    color: var(--accent-blue);
 }
 
-/* ボタン・リンク */
+/* ボタン（カプセル型） */
 .contact-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
-    padding: 0.5rem 1.5rem;
-    background-color: var(--primary-color);
+    padding: 0.8rem 2.5rem;
+    background-color: var(--wasurenagusa-color); /* 勿忘草色 */
     color: #fff;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
+    border-radius: var(--border-radius-pill); /* 丸み */
+    font-size: 1rem;
+    font-weight: bold;
     transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: var(--accent-color);
+    background-color: var(--accent-blue); /* ホバー時は少し濃く */
 }
 
 /* フッター（最下部の連絡先） */
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--wasurenagusa-color); /* 勿忘草色の背景 */
     color: #fff;
     text-align: center;
-    padding: 4rem 2rem 2rem;
-    margin-top: 4rem;
+    padding: 5rem 2rem 3rem;
+    margin-top: 5rem;
+    border-radius: 50px 50px 0 0; /* 上部を大きく丸く */
 }
 
 footer h2 {
     color: #fff;
     border-bottom: none;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* フッターの見出しの下線を白に */
+footer h2::after {
+    background-color: #fff;
 }
 
 footer p {
-    color: #ccc;
+    color: #fff;
+    margin-bottom: 0.5rem;
 }
 
 .footer-links {
     justify-content: center;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
 }
 
 .footer-links .btn {
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 2px solid #fff; /* 白枠 */
+    color: #fff;
+    padding: 0.7rem 2rem;
 }
 
 .footer-links .btn:hover {
     background-color: #fff;
-    color: var(--primary-color);
+    color: var(--accent-blue);
 }
 
 .copyright {
-    font-size: 0.8rem;
-    margin-top: 2rem;
+    font-size: 0.9rem;
+    margin-top: 3rem !important;
+    opacity: 0.8;
 }
 
 /* スマホ対応 */
@@ -181,9 +225,20 @@ footer p {
         flex-wrap: wrap;
     }
     nav ul li {
-        margin: 0.5rem;
+        margin: 0.3rem;
+    }
+    nav ul li a {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
     }
     .contact-links {
-        flex-direction: column;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    .date {
+        display: block;
+        margin-bottom: 0.3rem;
     }
 }
