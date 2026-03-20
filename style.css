@@ -1,0 +1,189 @@
+/* 基本設定 */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --bg-color: #fafafa;
+    --border-color: #eee;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* ナビゲーション */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* メインコンテンツ */
+main {
+    max-width: 800px;
+    margin: 80px auto 0; /* ヘッダーの高さ分下げる */
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+    padding-top: 2rem; /* スクロール位置の調整 */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.affiliation {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.intro {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+/* リストスタイル */
+.list-style {
+    list-style: none;
+}
+
+.list-style li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--border-color);
+}
+
+.date {
+    display: inline-block;
+    width: 80px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* ボタン・リンク */
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* フッター（最下部の連絡先） */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+    margin-top: 4rem;
+}
+
+footer h2 {
+    color: #fff;
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #ccc;
+}
+
+.footer-links {
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.footer-links .btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.footer-links .btn:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        margin: 0.5rem;
+    }
+    .contact-links {
+        flex-direction: column;
+    }
+}
