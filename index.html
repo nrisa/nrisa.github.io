@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>研究者ポートフォリオ</title>
+    <title>研究者ポートフォリオ | Your Name</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
     </header>
 
     <main>
-        <section id="about" class="section">
+        <section id="about" class="section section-top">
             <h1>氏名 (Your Name)</h1>
             <p class="affiliation">〇〇大学大学院 5年一貫制博士課程 加速器科学専攻</p>
             <p class="intro">
@@ -35,7 +35,7 @@
 
         <section id="news" class="section">
             <h2>News</h2>
-            <ul class="list-style">
+            <ul class="list-style news-list">
                 <li><span class="date">2026.03</span> 学振（日本学術振興会特別研究員）への申請準備中です。</li>
                 <li><span class="date">2026.02</span> 〇〇財団の奨学生に採用されました。</li>
                 <li><span class="date">2025.12</span> ビームテストを実施し、データ解析を開始しました。</li>
@@ -46,14 +46,14 @@
             <h2>Education & Experience</h2>
             <div class="cv-item">
                 <h3>学歴</h3>
-                <ul class="list-style">
+                <ul class="list-style cv-list">
                     <li><span class="date">202X.04 - 現在</span> 〇〇大学大学院 5年一貫制博士課程 加速器科学専攻</li>
                     <li><span class="date">202X.03</span> 〇〇大学 理学部 物理学科 卒業</li>
                 </ul>
             </div>
             <div class="cv-item">
                 <h3>活動歴・受賞歴</h3>
-                <ul class="list-style">
+                <ul class="list-style cv-list">
                     <li><span class="date">2026.04</span> 〇〇奨学財団 奨学生</li>
                 </ul>
             </div>
@@ -61,7 +61,7 @@
 
         <section id="publications" class="section">
             <h2>Publications</h2>
-            <ul class="list-style">
+            <ul class="list-style pub-list">
                 <li>
                     <u>Your Name</u>, Co-author A, Co-author B.<br>
                     "Title of the paper about Silica Aerogels", <i>Journal Name</i>, Vol.X, pp.XXX-XXX (2025).
@@ -72,39 +72,46 @@
         <section id="presentations" class="section">
             <h2>Presentations</h2>
             
-            <h3>国際学会 (International Conferences)</h3>
-            <ul class="list-style">
-                <li>
-                    <u>Your Name</u>, Co-author A.<br>
-                    "Development of Beam Profile Monitor...", <i>Conference Name</i>, Location, Country, Month. 2025. (Poster/Oral)
-                </li>
-            </ul>
+            <div class="presentation-block">
+                <h3>国際学会</h3>
+                <ul class="list-style pres-list">
+                    <li>
+                        <u>Your Name</u>, Co-author A.<br>
+                        "Development of Beam Profile Monitor...", <i>Conference Name</i>, Location, Country, Month. 2025. (Poster/Oral)
+                    </li>
+                </ul>
+            </div>
 
-            <h3>国内学会 (Domestic Conferences)</h3>
-            <ul class="list-style">
-                <li>
-                    <u>氏名</u>, 共同研究者.<br>
-                    「電子ビーム照射によるシリカエアロゲルの屈折率変化の測定」, <i>〇〇学会 第X回年会</i>, 開催地, 2026年3月. (口頭)
-                </li>
-            </ul>
+            <div class="presentation-block">
+                <h3>国内学会</h3>
+                <ul class="list-style pres-list">
+                    <li>
+                        <u>氏名</u>, 共同研究者.<br>
+                        「電子ビーム照射によるシリカエアロゲルの屈折率変化の測定」, <i>〇〇学会 第X回年会</i>, 開催地, 2026年3月. (口頭)
+                    </li>
+                </ul>
+            </div>
 
-            <h3>研究会など (Workshops)</h3>
-            <ul class="list-style">
-                <li>
-                    <u>氏名</u>.<br>
-                    「ミューオン線形加速器におけるビームプロファイルモニターの開発状況」, <i>第X回 〇〇研究会</i>, 開催地, 2025年11月.
-                </li>
-            </ul>
+            <div class="presentation-block">
+                <h3>研究会など</h3>
+                <ul class="list-style pres-list">
+                    <li>
+                        <u>氏名</u>.<br>
+                        「ミューオン線形加速器におけるビームプロファイルモニターの開発状況」, <i>第X回 〇〇研究会</i>, 開催地, 2025年11月.
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer id="contact">
         <h2>Contact</h2>
-        <p>ご自身の所属機関の住所や居室番号などを記載できます。</p>
-        <p>〒XXX-XXXX 〇〇県〇〇市〇〇 1-2-3 〇〇棟 XX号室</p>
-        <div class="contact-links footer-links">
-            <a href="mailto:your.email@example.com" class="btn">your.email@example.com</a>
-            <a href="https://twitter.com/yourid" target="_blank" class="btn">X (Twitter)</a>
+        <div class="footer-content">
+            <p>〒XXX-XXXX 〇〇県〇〇市〇〇 1-2-3 〇〇棟 XX号室</p>
+            <div class="contact-links footer-links">
+                <a href="mailto:your.email@example.com" class="btn">your.email@example.com</a>
+                <a href="https://twitter.com/yourid" target="_blank" class="btn btn-sns">X (Twitter)</a>
+            </div>
         </div>
         <p class="copyright">&copy; 2026 Your Name. All rights reserved.</p>
     </footer>
