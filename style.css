@@ -346,3 +346,32 @@ footer p {
         font-size: 1.8rem;
     }
 }
+/* ---------------------------------------------------
+   テキストメールアドレスと文中文末リンクのスタイル
+--------------------------------------------------- */
+.contact-email {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--aofuji-dark);
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+.contact-email-footer {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+/* リスト内のリンク（受賞歴など） */
+.list-style a {
+    color: var(--aofuji-dark);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--aofuji-dark);
+    transition: all 0.3s ease;
+}
+
+.list-style a:hover {
+    color: var(--aofuji-iro);
+    border-bottom: 1px solid var(--aofuji-iro);
+}
