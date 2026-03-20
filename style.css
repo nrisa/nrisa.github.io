@@ -1,14 +1,16 @@
 /* 基本設定 */
 :root {
-    --wasurenagusa-color: #89C4F4; /* 勿忘草色（基調色） */
-    --accent-blue: #5C97BF;       /* アクセント（少し濃い青） */
+    --aofuji-iro: #84A2D4;         /* 基調色（青藤色） */
+    --aofuji-dark: #6688BB;       /* 少し濃い青藤 */
     --text-color: #333;
     --bg-color: #fdfdfd;           /* ほぼ白に近いグレー */
     --card-bg-color: #f9f9f9;     /* リストアイテムの背景 */
     
-    /* 丸みの基準 */
+    --footer-bg-color: #333;       /* 濃いグレー */
+    --footer-text-color: #eee;
+    
+    /* 丸み（自己紹介カード用） */
     --border-radius-base: 12px;
-    --border-radius-pill: 50px;    /* カプセル型 */
 }
 
 * {
@@ -39,33 +41,52 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--wasurenagusa-color); /* 勿忘草色 */
+    color: var(--text-color);
     font-weight: bold;
     font-size: 0.95rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: var(--border-radius-pill); /* 丸み */
+    padding: 0.5rem 1rem;
     transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: var(--wasurenagusa-color);
-    color: #fff;
+    color: var(--aofuji-iro);
+    background-color: transparent;
+}
+
+/* ---------------------------------------------------
+   【追加】ヒーローヘッダー（自分で撮った写真用）
+--------------------------------------------------- */
+.hero-header {
+    width: 100%;
+    height: 350px; /* 画像の縦幅。お好みで変更してください */
+    margin-top: 60px; /* 固定ナビゲーションの高さ分下げる */
+    background-color: var(--aofuji-iro); /* 画像が読み込まれるまでの仮の色 */
+    
+    /* ★ここに自分で撮った写真のファイル名を指定してください（例: header-photo.jpg） */
+    background-image: url('header-photo.jpg'); 
+    
+    background-size: cover;
+    background-position: center; /* 画像の中央を表示 */
+    background-repeat: no-repeat;
 }
 
 /* メインコンテンツ */
 main {
     max-width: 800px;
-    margin: 100px auto 0; /* ヘッダーの高さ分下げる */
+    /* 【修正】ヘッダー画像の上に自己紹介カードを少し重ねるためのマイナスマージン */
+    margin: -80px auto 0; 
     padding: 0 2rem;
+    position: relative;
+    z-index: 10; /* 画像より前面に出す */
 }
 
 .section {
@@ -82,14 +103,13 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    color: var(--accent-blue);
+    color: var(--text-color);
     position: relative;
     display: inline-block;
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
 }
 
-/* h2の下線を丸く */
 h2::after {
     content: '';
     position: absolute;
@@ -97,14 +117,15 @@ h2::after {
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: var(--wasurenagusa-color);
-    border-radius: var(--border-radius-pill);
+    background-color: var(--aofuji-iro);
 }
 
 h3 {
     font-size: 1.3rem;
-    color: var(--accent-blue);
+    color: var(--text-color);
     margin: 2rem 0 1rem;
+    padding-left: 0.5rem;
+    border-left: 5px solid var(--aofuji-iro); 
 }
 
 .affiliation {
@@ -119,46 +140,46 @@ h3 {
     color: #555;
 }
 
-/* リストアイテム全体を丸いカード風に */
+/* リストアイテム */
 .list-style {
     list-style: none;
 }
 
 .list-style li {
     background-color: var(--card-bg-color);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     padding: 1.5rem;
-    border-radius: var(--border-radius-base); /* 丸み */
-    border-left: 5px solid var(--wasurenagusa-color); /* 左側のボーダー */
+    border-left: 5px solid #eee; 
     transition: transform 0.2s ease;
 }
 
 .list-style li:hover {
-    transform: translateY(-3px); /* 少し浮かす */
+    transform: translateY(-3px); 
+    border-left: 5px solid var(--aofuji-iro); 
 }
 
 .date {
     display: inline-block;
     width: 90px;
     font-weight: bold;
-    color: var(--accent-blue);
+    color: var(--aofuji-iro);
 }
 
-/* ボタン（カプセル型） */
+/* ボタン */
 .contact-links {
     display: flex;
-    gap: 1.2rem;
+    gap: 1rem;
     margin-top: 1rem;
     flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
-    padding: 0.8rem 2.5rem;
-    background-color: var(--wasurenagusa-color); /* 勿忘草色 */
+    padding: 0.6rem 2rem;
+    background-color: var(--aofuji-iro);
     color: #fff;
     text-decoration: none;
-    border-radius: var(--border-radius-pill); /* 丸み */
+    border-radius: var(--border-radius-base); 
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
@@ -167,32 +188,35 @@ h3 {
 }
 
 .btn:hover {
-    background-color: var(--accent-blue); /* ホバー時は少し濃く */
+    background-color: var(--aofuji-dark); 
 }
 
-/* フッター（最下部の連絡先） */
+/* フッター */
 footer {
-    background-color: var(--wasurenagusa-color); /* 勿忘草色の背景 */
-    color: #fff;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     text-align: center;
     padding: 5rem 2rem 3rem;
     margin-top: 5rem;
-    border-radius: 50px 50px 0 0; /* 上部を大きく丸く */
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 footer h2 {
-    color: #fff;
+    color: var(--footer-text-color);
     border-bottom: none;
     margin-bottom: 2rem;
 }
 
-/* フッターの見出しの下線を白に */
 footer h2::after {
     background-color: #fff;
 }
 
 footer p {
-    color: #fff;
+    color: #ccc;
     margin-bottom: 0.5rem;
 }
 
@@ -203,14 +227,13 @@ footer p {
 
 .footer-links .btn {
     background-color: transparent;
-    border: 2px solid #fff; /* 白枠 */
+    border: 2px solid #fff; 
     color: #fff;
-    padding: 0.7rem 2rem;
 }
 
 .footer-links .btn:hover {
     background-color: #fff;
-    color: var(--accent-blue);
+    color: var(--footer-bg-color);
 }
 
 .copyright {
@@ -219,18 +242,86 @@ footer p {
     opacity: 0.8;
 }
 
-/* スマホ対応 */
+/* ---------------------------------------------------
+   自己紹介カード（影付き・丸み・顔写真対応）
+--------------------------------------------------- */
+.about-card {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: var(--border-radius-base); /* 丸み */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* 影 */
+    margin-bottom: 3rem;
+}
+
+.about-flex {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* 写真部分 */
+.about-photo {
+    flex: 0 0 150px; 
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* ここだけは顔写真なので丸く抜きます */
+    object-fit: cover;
+    display: none; /* 実際の画像を入れたらブロック表示になります。プレースホルダー使用時はこのまま */
+}
+
+/* 画像がない場合のプレースホルダー */
+.placeholder-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.about-text {
+    flex: 1; 
+}
+
+.about-text h1 {
+    font-size: 2.2rem; 
+}
+
+.about-text .intro {
+    margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------------
+   スマホ対応
+--------------------------------------------------- */
 @media (max-width: 600px) {
     nav ul {
         flex-wrap: wrap;
+        padding: 0.5rem 0;
     }
     nav ul li {
-        margin: 0.3rem;
+        margin: 0.3rem 0.6rem;
     }
     nav ul li a {
         font-size: 0.85rem;
-        padding: 0.5rem 1rem;
+        padding: 0.3rem 0.5rem;
     }
+    
+    .hero-header {
+        height: 200px; /* スマホではヘッダー画像を少し細く */
+    }
+    
+    main {
+        padding: 0 1rem;
+        margin-top: -50px; /* スマホ用オーバーラップ調整 */
+    }
+    
     .contact-links {
         justify-content: center;
     }
@@ -240,5 +331,18 @@ footer p {
     .date {
         display: block;
         margin-bottom: 0.3rem;
+    }
+    
+    .about-card {
+        padding: 2rem;
+    }
+    .about-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    .about-text h1 {
+        font-size: 1.8rem;
     }
 }
