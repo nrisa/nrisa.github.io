@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>研究者ポートフォリオ | Your Name</title>
+    <title>ポートフォリオ | Nakagawa Risa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#news">News</a></li>
                 <li><a href="#cv">CV</a></li>
-                <li><a href="#publications">Publications</a></li>
                 <li><a href="#presentations">Presentations</a></li>
+                <li><a href="#media">Media</a></li>
             </ul>
         </nav>
     </header>
@@ -30,16 +30,16 @@
                         <div class="placeholder-photo">Photo</div>
                     </div>
                     <div class="about-text">
-                        <h1>氏名 (Your Name)</h1>
-                        <p class="affiliation">〇〇大学大学院 5年一貫制博士課程 加速器科学専攻</p>
+                        <h1>中川 鈴彩 (Risa NAKAGAWA)</h1>
+                        <p class="affiliation">総合研究大学大学院 加速器科学コース 5年一貫制博士課程 </p>
                         <p class="intro">
-                            シリカエアロゲルを用いたミューオンg-2/EDM精密測定に向けたビームプロファイルモニターの開発などを行っています。
+                            ミューオンg-2/EDM精密測定に向けたビームプロファイルモニターの開発などを行っています。
                         </p>
-                        <p class="contact-email">Email: your.email [at] example.com</p>
+                        <p class="contact-email"><strong>Email: nrisa [at] post.kek.jp</strong></p>
                         
                         <div class="contact-links">
-                            <a href="https://github.com/yourusername" target="_blank" class="btn">GitHub</a>
-                            <a href="https://researchmap.jp/yourid" target="_blank" class="btn">Researchmap</a>
+                            <a href="https://researchmap.jp/nrisa" target="_blank" class="btn">Researchmap</a>
+                            <a href="https://orcid.org/0009-0008-3916-5087" target="_blank" class="btn">ORCID</a>
                         </div>
                     </div>
                 </div>
@@ -48,10 +48,11 @@
 
         <section id="news" class="section">
             <h2>News</h2>
-            <ul class="list-style news-list">
-                <li><span class="date">2026.03</span> 学振（日本学術振興会特別研究員）への申請準備中です。</li>
-                <li><span class="date">2026.02</span> <a href="https://www.nitori-shougakuzaidan.com/" target="_blank">〇〇財団</a>の奨学生に採用されました。</li>
-                <li><span class="date">2025.12</span> ビームテストを実施し、データ解析を開始しました。</li>
+            <ul class="list-style table-layout">
+                <li>
+                    <div class="date-col">2026.02</div>
+                    <div class="content-col"><a href="https://conference-indico.kek.jp/event/330/overview" target="_blank">2025年度ビーム物理研究会 若手の会</a>で口頭発表を行いました。</div>
+                </li>
             </ul>
         </section>
 
@@ -59,61 +60,121 @@
             <h2>Education & Experience</h2>
             <div class="cv-item">
                 <h3>学歴</h3>
-                <ul class="list-style cv-list">
-                    <li><span class="date">202X.04 - 現在</span> 〇〇大学大学院 5年一貫制博士課程 加速器科学専攻</li>
-                    <li><span class="date">202X.03</span> 〇〇大学 理学部 物理学科 卒業</li>
+                <ul class="list-style table-layout">
+                    <li>
+                        <div class="date-col">2025.04 - 現在</div>
+                        <div class="content-col">総合研究大学大学院 加速器科学コース 5年一貫制博士課程</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2025.03</div>
+                        <div class="content-col">東北大学 理学部 化学科 卒業</div>
+                    </li>
                 </ul>
             </div>
+            
             <div class="cv-item">
-                <h3>活動歴・受賞歴</h3>
-                <ul class="list-style cv-list">
-                    <li><span class="date">2026.04</span> <a href="https://www.nitori-shougakuzaidan.com/" target="_blank">〇〇奨学財団</a> 奨学生</li>
+                <h3>活動</h3>
+                <ul class="list-style table-layout">
+                    <li>
+                        <div class="date-col">2021.04 - 現在</div>
+                        <div class="content-col">加速キッチン 学生スタッフ</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2024.09</div>
+                        <div class="content-col">令和6年度 JAEA夏期休暇実習 参加</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2023.11</div>
+                        <div class="content-col"><a href="https://www2.kek.jp/uskek/acc-internship/" target="_blank">2023年度加速器科学インターンシップ</a>, 茨城</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2023.08</div>
+                        <div class="content-col"><a href="https://www2.kek.jp/ksc/17th_2023/" target="_blank">第17回サマーチャレンジ</a>, 茨城</div>
+                    </li>
                 </ul>
             </div>
-        </section>
 
-        <section id="publications" class="section">
-            <h2>Publications</h2>
-            <ul class="list-style pub-list">
-                <li>
-                    <u>Your Name</u>, Co-author A, Co-author B.<br>
-                    "Title of the paper about Silica Aerogels", <i>Journal Name</i>, Vol.X, pp.XXX-XXX (2025).
-                </li>
-            </ul>
+            <div class="cv-item">
+                <h3>受賞</h3>
+                <ul class="list-style table-layout">
+                    <li>
+                        <div class="date-col">2025.08</div>
+                        <div class="content-col"><a href="https://www.pasj.jp/award_nenkai.html" target="_blank">第22回日本加速器学会年会</a> 口頭発表部門 年会賞</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2019.12</div>
+                        <div class="content-col"><a href="https://manabu.asahi.com/jsec/2019/" target="_blank">第17回高校生科学技術チャレンジ (JSEC)</a> 優秀賞</div>
+                    </li>
+                    <li>
+                        <div class="date-col">YYYY.MM</div>
+                        <div class="content-col">第57回全道高等学校理科研究発表大会 化学部門 奨励賞</div>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section id="presentations" class="section">
             <h2>Presentations</h2>
             
             <div class="presentation-block">
-                <h3>国際学会</h3>
-                <ul class="list-style pres-list">
+                <h3>国際会議</h3>
+                <ul class="list-style table-layout">
                     <li>
-                        <u>Your Name</u>, Co-author A.<br>
-                        "Development of Beam Profile Monitor...", <i>Conference Name</i>, Location, Country, Month. 2025. (Poster/Oral)
+                        <div class="date-col">2025.12</div>
+                        <div class="content-col">“Optical System Design and Prototyping of a Cherenkov Radiation-Based Beam Profile Monitor for the Muon Linear Accelerator”, The 31st muon g-2/EDM collaboration meeting, 福岡. （ポスター）</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2025.09</div>
+                        <div class="content-col">“Development of a Cherenkov Radiation–Based Beam Profile Monitor for a Muon Linear Accelerator”, <a href="https://indico.jacow.org/event/90/" target="_blank">The 14th International Beam Instrumentation Conference (IBIC 2025)</a>, Liverpool University. （ポスター）</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2025.06</div>
+                        <div class="content-col">“Cherenkov Beam Profile Monitor”, The 30th muon g-2/EDM collaboration meeting, 茨城. （ポスター）</div>
                     </li>
                 </ul>
             </div>
 
             <div class="presentation-block">
-                <h3>国内学会</h3>
-                <ul class="list-style pres-list">
+                <h3>国内会議</h3>
+                <ul class="list-style table-layout">
                     <li>
-                        <u>氏名</u>, 共同研究者.<br>
-                        「電子ビーム照射によるシリカエアロゲルの屈折率変化の測定」, <i>〇〇学会 第X回年会</i>, 開催地, 2026年3月. (口頭)
+                        <div class="date-col">2026.03</div>
+                        <div class="content-col">「シリカエアロゲルチェレンコフ媒質を用いたミュオン線形加速器用ビームプロファイルモニターの開発と放射線耐性評価」, <a href="https://conference-indico.kek.jp/event/330/overview" target="_blank">2025年度ビーム物理研究会 若手の会</a>, 茨城. （口頭）</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2025.08</div>
+                        <div class="content-col">「低エミッタンスミュオンビーム測定のためのチェレンコフ放射型プロファイルモニターの開発」, <a href="https://www.pasj.jp/dai22kainenkai/" target="_blank">第22回日本加速器学会年会</a>, 東京. （口頭）</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2025.03</div>
+                        <div class="content-col">「ミュオン水素原子のカスケード過程のモンテカルロシミュレーション」, <a href="https://onsite.gakkai-web.net/jps/jps_search/2025sp/" target="_blank">日本物理学会 2025年春季大会</a>, オンライン. （ポスター）</div>
+                    </li>
+                    <li>
+                        <div class="date-col">2022.03</div>
+                        <div class="content-col">「Webカメラを用いた放射線検出器の製作及び中高生を対象にした教材としての活用」, <a href="https://www.jps.or.jp/activities/meetings/gaiyo2022A.php" target="_blank">日本物理学会 第77回年次大会</a>, オンライン. （ポスター）</div>
                     </li>
                 </ul>
             </div>
 
             <div class="presentation-block">
-                <h3>研究会など</h3>
-                <ul class="list-style pres-list">
+                <h3>その他</h3>
+                <ul class="list-style table-layout">
                     <li>
-                        <u>氏名</u>.<br>
-                        「ミューオン線形加速器におけるビームプロファイルモニターの開発状況」, <i>第X回 〇〇研究会</i>, 開催地, 2025年11月.
+                        <div class="date-col">2025.07</div>
+                        <div class="content-col">「ミュオンビームプロファイルモニター用シリカエアロゲル放射線耐性試験」, RARiS2025後期課題採択説明会.</div>
                     </li>
                 </ul>
             </div>
+        </section>
+
+        <section id="media" class="section">
+            <h2>Media</h2>
+            <ul class="list-style table-layout">
+                <li>
+                    <div class="date-col">2022.07</div>
+                    <div class="content-col"><a href="https://www.nishina.riken.jp/ouen/report2.html" target="_blank">中川鈴彩, 「原子核の質量を求め、宇宙の起源を解き明かす」, 理化学研究所（インタビュー記事）</a></div>
+                </li>
+            </ul>
         </section>
     </main>
 
@@ -121,13 +182,12 @@
         <div class="footer-container">
             <h2>Contact</h2>
             <div class="footer-content">
-                <p>〒XXX-XXXX 〇〇県〇〇市〇〇 1-2-3 〇〇棟 XX号室</p>
-                <p class="contact-email-footer">Email: your.email [at] example.com</p>
+                <p class="contact-email-footer"><strong>Email: nrisa [at] post.kek.jp</strong></p>
                 <div class="contact-links footer-links">
                     <a href="https://twitter.com/yourid" target="_blank" class="btn btn-sns">X (Twitter)</a>
                 </div>
             </div>
-            <p class="copyright">&copy; 2026 Your Name. All rights reserved.</p>
+            <p class="copyright">&copy; 2026 Risa Nakagawa. All rights reserved.</p>
         </div>
     </footer>
 </body>
